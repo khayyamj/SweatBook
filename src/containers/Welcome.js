@@ -15,7 +15,7 @@ export const Welcome = (props) => (
     >
       <View style={styles.titleContianer}>
         <Text style={styles.title}>
-          Sweatbook - the app
+          Sweatbook
         </Text>
       </View>
       <View style={styles.lastWorkoutContainer}>
