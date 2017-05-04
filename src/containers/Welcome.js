@@ -10,7 +10,7 @@ import {
 export const Welcome = (props) => (
   <View style={{flex: 1}}>
     <LinearGradient
-      colors={['#4A148C', '#880E4F']}
+      colors={['#1D62F0', '#1AD6FD']}
       style={styles.container}
     >
       <View style={styles.titleContianer}>
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 48,
     fontWeight: '500',
-    color: '#F3F3F3',
+    color: 'blue',
     textAlign: 'center'
   },
   lastWorkoutContainer: {
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
   lastWorkoutTitle: {
     fontSize: 30,
     fontWeight: '100',
-    color: '#F3F3F3'
+    color: 'blue'
   },
   button: {
-    borderColor: '#EADCDC',
+    borderColor: 'yellow',
     padding: 10,
     borderRadius: 10
   },
   buttonText: {
-    color: '#EADCDC'
+    color: 'green'
   }
 });
