@@ -15,6 +15,7 @@ export class Root extends Component {
     this.setState({ started: true });
   }
   renderRoot(ComponentToRender) {
+    console.log(store);
     return (
       <Provider store={store}>
         <ComponentToRender onStartWorkOut={this.startWorkout} />

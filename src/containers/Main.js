@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Modal,
+  TouchableHighlight
 } from 'react-native';
 import TabView from 'react-native-scrollable-tab-view';
 import LinearGradient from 'react-native-linear-gradient';
-import { CurrentWorkout } from '../ui';
+import { CurrentWorkout } from '../containers';
 
 
 export class Main extends Component {
-  constructor(){
-    super();
-  }
-  render() {
+
+  render () {
     return (
       <View style={{ flex: 1 }}>
         <LinearGradient
@@ -28,12 +28,12 @@ export class Main extends Component {
           </TabView>
         </LinearGradient>
       </View>
-    )
+    );
   }
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
   }
-})
+});

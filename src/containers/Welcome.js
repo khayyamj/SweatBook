@@ -43,13 +43,15 @@ const styles = StyleSheet.create({
   titleContianer: {
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 0.2
+    flex: 0.2,
+    backgroundColor: 'transparent'
   },
   title: {
     fontSize: 48,
     fontWeight: '500',
     color: 'blue',
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: 'transparent'
   },
   lastWorkoutContainer: {
     flex: 0.3
@@ -57,7 +59,8 @@ const styles = StyleSheet.create({
   lastWorkoutTitle: {
     fontSize: 30,
     fontWeight: '100',
-    color: 'blue'
+    color: 'blue',
+    backgroundColor: 'transparent'
   },
   button: {
     borderColor: 'yellow',
