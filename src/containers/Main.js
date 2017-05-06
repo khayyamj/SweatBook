@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import TabView from 'react-native-scrollable-tab-view';
 import LinearGradient from 'react-native-linear-gradient';
-import { CurrentWorkout } from '../containers';
+import { CurrentWorkout } from './currentWorkout';
 
 
 export class Main extends Component {

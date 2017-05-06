@@ -4,19 +4,19 @@ import {
   Text,
   StyleSheet
 } from 'react-native';
-import { TopBar } from './TopBar'
+import { TopBar } from '../ui';
 import { connect } from 'react-redux';
 import { setExerciseModalVisibility } from '../actions';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state) => ({
   currentWorkout: state.currentWorkout,
   exerciseModal: state.ui.exerciseModal
-}
-const mapActionsToProps = (dispatch) =>{
+});
+const mapActionsToProps = (dispatch) => ({
   setModalVisibility(visible) {
     return dispatch (setExerciseModalVisibility(visible));
   }
-}
+});
 
 class _CurrentWorkout extends Component {
   static defaultProps = {
@@ -29,12 +29,14 @@ class _CurrentWorkout extends Component {
         <TopBar style={styles.topbar}>
           <Text style={styles.textbar}>Current Workout</Text>
         </TopBar>
-        <Text>
-          Current Workout
-        </Text>
-        <Text>
-          Exercise Modal
-        </Text>
+        <WorkoutList
+          setModalVisibility={this.props.setModalVisibility}
+          currentWorkout={this.props.currentWorkout}
+        />
+        <ExerciseModal
+          visible={this.props.exerciseModal}
+          closeModal={() => this.props.setModalVisibility(false)}
+        />
       </View>
     )
   }
@@ -53,3 +55,5 @@ const styles = StyleSheet.create({
     fontSize: 30
   }
 })
+
+export const CurrentWorkout = connect(mapStateToProps, mapActionsToProps)(_CurrentWorkout);
